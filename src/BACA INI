@@ -1,0 +1,22 @@
+di main ada bagian menu Profmenu
+ProfMenu:
+                   while (true){
+                        System.out.print("1. Give assignment" +
+                                "2. Grade" +
+                                "3. Return" +
+                                ">> ");
+                        pil = Sc.nextInt();
+                        switch (pil){
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break ProfMenu;
+                        }
+                    }
+                    break;
+                case 4:
+                    break SistemMenu;
+
+buat fungsi seperti yang diatas 1 dan 2, terserah mau buatnya gimana pake chat gpt gak papa asalkan paham
