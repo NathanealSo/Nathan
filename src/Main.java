@@ -49,17 +49,36 @@ public class Main {
                         pil = Sc.nextInt();
                         switch (pil){
                             case 1:
+                                System.out.print("Enter assignment title: ");
+                                String assignment = Sc.nextLine();
+                                assignments.add(assignment);
+                                grades.add(0); // nilai default 0
+                                System.out.println("Assignment added.");
                                 break;
-                            case 2:
+                            case 2:  
+                                if (assignments.isEmpty()) {
+                                System.out.println("No assignments available to grade.");
+                                } else {
+                                    for (int i = 0; i < assignments.size(); i++) {
+                                        System.out.println((i + 1) + ". " + assignments.get(i) + " (Grade: " + grades.get(i) + ")");
+                                    }
+                                    System.out.print("Select assignment number to grade: ");
+                                    int idx = Sc.nextInt() - 1;
+                                    if (idx >= 0 && idx < grades.size()) {
+                                        System.out.print("Enter grade (0-100): ");
+                                        int grade = Sc.nextInt();
+                                        grades.set(idx, grade);
+                                        System.out.println("Grade updated.");
+                                    } else {
+                                        System.out.println("Invalid assignment number.");
+                                    }
+                                }
                                 break;
                             case 3:
                                 break ProfMenu;
-                        }
-                    }
-                    break;
-                case 4:
-                    break SistemMenu;
-            }
+                            default:
+                                System.out.println("Invalid choice, try again.");
+                }
         }
         System.out.println();
     }
